@@ -6,6 +6,8 @@ public class SongSelectButton : MonoBehaviour
     public string songTitle; // このボタンで選ぶ曲名
     public string scenename; // 遷移先のシーン名
     public TransitionEffect yourTransitionEffect; // 遷移エフェクト
+    public AudioSource audioSource;
+    public AudioClip tSound;
 
     public void OnSongButtonClick()
     {
@@ -18,6 +20,10 @@ public class SongSelectButton : MonoBehaviour
         Debug.Log(songTitle + " を選択。難易度: " + GameDataManager.Instance.difficulty);
 
         // 3. ゲーム画面へ遷移
+        if (audioSource != null && tSound != null)
+        {
+            audioSource.PlayOneShot(tSound);
+        }
         SceneTransitioner.Instance.LoadScene(scenename, yourTransitionEffect);
     }
 }
