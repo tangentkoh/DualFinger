@@ -593,7 +593,12 @@ MonoBehaviour:
   difficulty: Normal
   songName: 
   score: 0
+  goodCount: 0
+  okCount: 0
+  missCount: 0
+  maxCombo: 0
   currentSheetJson: {fileID: 0}
+  currentAudioClip: {fileID: 0}
 --- !u!212 &1132542407
 SpriteRenderer:
   serializedVersion: 2

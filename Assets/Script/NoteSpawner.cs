@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using Newtonsoft.Json; // Newtonsoft.Jsonを使用
 
 public class NoteSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject notePrefab;
-    [SerializeField] private GameObject longNotePrefab;
+    [SerializeField] private GameObject notePrefab;       // 単押し用
+    [SerializeField] private GameObject longNotePrefab;   // 長押し用（縦に伸びる方）
     [SerializeField] private Transform[] lanePositions;
 
     public void SpawnNotes(MusicSheet sheet)
@@ -40,21 +40,23 @@ public class NoteSpawner : MonoBehaviour
         LongNoteController controller = obj.GetComponent<LongNoteController>();
         controller.lane = data.block;
 
-        // 開始時間の計算
-        float startTime = (float)data.num / data.LPB * (60f / bpm);
-        controller.startTime = startTime;
-        controller.checkTimes.Add(startTime);
+        // 1. 開始時間の計算と保持
+        float start = (float)data.num / data.LPB * (60f / bpm);
+        controller.startTime = start;
+        controller.checkTimes.Add(start); // 最初の判定ポイント
 
-        // 中間・終点データの追加
+        // 2. 中間・終点データの追加
         if (data.notes != null)
         {
             foreach (var subNote in data.notes)
             {
                 float t = (float)subNote.num / subNote.LPB * (60f / bpm);
-                controller.checkTimes.Add(t);
-                controller.endTime = t; // 最後の要素がendTimeになる
+                controller.checkTimes.Add(t); // 判定リストに追加
+                controller.endTime = t;       // 最終的に「一番最後の時間」が代入される
             }
         }
+
+        // 3. 生成位置の設定
         obj.transform.position = lanePositions[data.block].position;
     }
 }

@@ -915,7 +915,6 @@ GameObject:
   m_Component:
   - component: {fileID: 681306242}
   - component: {fileID: 681306241}
-  - component: {fileID: 681306243}
   m_Layer: 0
   m_Name: NoteSpwner
   m_TagString: Untagged
@@ -936,7 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteSpawner
   notePrefab: {fileID: 77555642047342048, guid: 0015723edbcfa8f45a659e00bbb1b406, type: 3}
-  longNotePrefab: {fileID: 1348717163034889308, guid: bae7e1c9d894ffb428ce30eedb7d2a20, type: 3}
+  longNotePrefab: {fileID: 4964657943228422735, guid: c53e890e3f13c254a804dd4348b5f855, type: 3}
   lanePositions:
   - {fileID: 693505326}
   - {fileID: 1014617510}
@@ -955,20 +954,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &681306243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681306240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456c234b94e0a3147b0449447a2ecefe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputHandler
-  leftKey: 276
-  rightKey: 275
 --- !u!1 &693505325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1165,7 @@ GameObject:
   - component: {fileID: 1061871398}
   - component: {fileID: 1061871397}
   - component: {fileID: 1061871396}
+  - component: {fileID: 1061871399}
   m_Layer: 5
   m_Name: B2
   m_TagString: Untagged
@@ -1251,7 +1237,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 681306243}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
         m_MethodName: OnButtonDown
         m_Mode: 3
@@ -1301,6 +1287,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061871394}
   m_CullTransparentMesh: 1
+--- !u!114 &1061871399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061871394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2100954800}
+          m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+          m_MethodName: SetRightPressed
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2100954800}
+          m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+          m_MethodName: SetRightPressed
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1074521990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1781,7 @@ GameObject:
   - component: {fileID: 1634982674}
   - component: {fileID: 1634982673}
   - component: {fileID: 1634982672}
+  - component: {fileID: 1634982675}
   m_Layer: 5
   m_Name: B1
   m_TagString: Untagged
@@ -1821,7 +1853,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 681306243}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
         m_MethodName: OnButtonDown
         m_Mode: 3
@@ -1871,6 +1903,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634982670}
   m_CullTransparentMesh: 1
+--- !u!114 &1634982675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634982670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2100954800}
+          m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+          m_MethodName: SetLeftPressed
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2100954800}
+          m_TargetAssemblyTypeName: InputHandler, Assembly-CSharp
+          m_MethodName: SetLeftPressed
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1818606797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2300,6 +2377,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086774501}
   m_CullTransparentMesh: 1
+--- !u!1 &2100954799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100954801}
+  - component: {fileID: 2100954800}
+  m_Layer: 0
+  m_Name: InputHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2100954800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100954799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456c234b94e0a3147b0449447a2ecefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputHandler
+  leftKey: 276
+  rightKey: 275
+  audioSource: {fileID: 2143421712}
+  tSound: {fileID: 8300000, guid: d9f9e7baaf3428a41949c69083686df4, type: 3}
+--- !u!4 &2100954801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100954799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2143421711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,5 +2564,6 @@ SceneRoots:
   - {fileID: 2143421713}
   - {fileID: 165970821}
   - {fileID: 681306242}
+  - {fileID: 2100954801}
   - {fileID: 693505326}
   - {fileID: 1014617510}
