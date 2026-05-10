@@ -9,6 +9,10 @@ public class GameDataManager : MonoBehaviour
     public string difficulty = "Normal"; // 難易度
     public string songName = "";         // 曲名
     public int score = 0;                // スコア
+    public int goodCount = 0;
+    public int okCount = 0;
+    public int missCount = 0;
+    public int maxCombo = 0;
     public TextAsset currentSheetJson;   // 選択された曲のJSONファイル
     public AudioClip currentAudioClip;   // 選択された曲のAudioClip
 
@@ -30,5 +34,9 @@ public class GameDataManager : MonoBehaviour
     public void ResetData()
     {
         score = 0;
+        goodCount = 0;
+        okCount = 0;
+        missCount = 0;
+        maxCombo = 0;
     }
 }

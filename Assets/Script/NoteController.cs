@@ -3,6 +3,7 @@ using UnityEngine;
 public class NoteController : MonoBehaviour
 {
     public float targetTime;    // このノーツが判定ラインに来るべき秒数
+    public int lane;
     public float scrollSpeed = 10f; // スクロール速度
 
     void Update()
@@ -19,12 +20,13 @@ public class NoteController : MonoBehaviour
         // 残り時間に基づいて位置を更新
         // timeDiffが0のときに y=0 (判定ライン) になります
         Vector3 pos = transform.position;
-        pos.y = timeDiff * scrollSpeed;
+        pos.y = (timeDiff * scrollSpeed) - 4f;
         transform.position = pos;
 
-        // 判定ラインを通り過ぎて1秒（ミス）経ったら消滅
-        if (timeDiff < -1.0f) 
+        // 判定ラインを通り過ぎて0.5秒経ったら消滅
+        if (timeDiff < -0.5f) 
         {
+            ComboManager.Instance.AddScore("Miss");
             Destroy(gameObject);
         }
     }

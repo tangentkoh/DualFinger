@@ -412,7 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535098ed51ccfca4a9153705ed4d4549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SongSelectButton
-  songTitle: 01
+  songTitle: "\u632F\u308A\u4E0B\u308D\u3055\u308C\u305F\u62F3"
+  sheetJson: {fileID: 4900000, guid: 50be4a24e9d5b924a8b5c76b888a51bf, type: 3}
+  musicClip: {fileID: 8300000, guid: 4f9179312d31acd47b28bc8d981b0db1, type: 3}
   scenename: Play
   yourTransitionEffect: {fileID: 11400000, guid: fb084ff38d5802d419c952b62cb357d8, type: 2}
   audioSource: {fileID: 1475322005}
@@ -1031,7 +1033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 01
+  m_text: "\u632F\u308A\u4E0B\u308D\u3055\u308C\u305F\u62F3"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 866d4e9de6c1d31489c11257d7cf8a6c, type: 2}
   m_sharedMaterial: {fileID: 8150628067090197498, guid: 866d4e9de6c1d31489c11257d7cf8a6c, type: 2}
@@ -1257,7 +1259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535098ed51ccfca4a9153705ed4d4549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SongSelectButton
-  songTitle: 00
+  songTitle: Ultra Pulse
+  sheetJson: {fileID: 4900000, guid: de29caa0e7228484d97631a10242787a, type: 3}
+  musicClip: {fileID: 8300000, guid: 3ef729c75d7a4bf4abdfae6a37336d94, type: 3}
   scenename: Play
   yourTransitionEffect: {fileID: 11400000, guid: fb084ff38d5802d419c952b62cb357d8, type: 2}
   audioSource: {fileID: 1475322005}
@@ -1319,7 +1323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00
+  m_text: Ultra Pulse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 866d4e9de6c1d31489c11257d7cf8a6c, type: 2}
   m_sharedMaterial: {fileID: 8150628067090197498, guid: 866d4e9de6c1d31489c11257d7cf8a6c, type: 2}

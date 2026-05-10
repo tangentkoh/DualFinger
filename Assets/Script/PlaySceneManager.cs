@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using PixeLadder.EasyTransition;
+using Newtonsoft.Json;
 
 public class PlaySceneManager : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class PlaySceneManager : MonoBehaviour
         if (GameDataManager.Instance != null && GameDataManager.Instance.currentSheetJson != null)
         {
             // NoteEditor形式のJSONをパース
-            MusicSheet sheet = JsonUtility.FromJson<MusicSheet>(GameDataManager.Instance.currentSheetJson.text);
+            MusicSheet sheet = JsonConvert.DeserializeObject<MusicSheet>(GameDataManager.Instance.currentSheetJson.text);
             // ノーツを生成（描画）
             noteSpawner.SpawnNotes(sheet);
             
