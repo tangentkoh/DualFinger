@@ -361,7 +361,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2387,6 +2387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100954801}
   - component: {fileID: 2100954800}
+  - component: {fileID: 2100954802}
   m_Layer: 0
   m_Name: InputHandler
   m_TagString: Untagged
@@ -2409,7 +2410,7 @@ MonoBehaviour:
   leftKey: 276
   rightKey: 275
   audioSource: {fileID: 2143421712}
-  tSound: {fileID: 8300000, guid: d9f9e7baaf3428a41949c69083686df4, type: 3}
+  tSound: {fileID: 8300000, guid: 8590c81136ba4314398ba81aaf66e1db, type: 3}
 --- !u!4 &2100954801
 Transform:
   m_ObjectHideFlags: 0
@@ -2425,6 +2426,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100954802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100954799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1915ada92bfa33f45974ed199dd4ab0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FManager
+  tapEffectPrefab: {fileID: 4021103657954561961, guid: dce875cb5ab17554e8cf5d03991123d6, type: 3}
+  lanePositions:
+  - {fileID: 693505326}
+  - {fileID: 1014617510}
 --- !u!1 &2143421711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2472,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

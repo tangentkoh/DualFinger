@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using unityroom.Api;
 
 public class ResultManager : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class ResultManager : MonoBehaviour
             goodText.text = "Good:" + data.goodCount;
             okText.text   = "Ok:" + data.okCount;
             missText.text = "Miss:" + data.missCount;
+
+            UnityroomApiClient.Instance.SendScore(1, data.score, ScoreboardWriteMode.HighScoreDesc);
         }
     }
 }

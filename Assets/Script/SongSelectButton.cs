@@ -4,7 +4,8 @@ using PixeLadder.EasyTransition;
 public class SongSelectButton : MonoBehaviour
 {
     public string songTitle; // このボタンで選ぶ曲名
-    [SerializeField] private TextAsset sheetJson;
+    [SerializeField] private TextAsset normalSheet;
+    [SerializeField] private TextAsset hardSheet;
     [SerializeField] private AudioClip musicClip;
     public string scenename; // 遷移先のシーン名
     public TransitionEffect yourTransitionEffect; // 遷移エフェクト
@@ -14,9 +15,18 @@ public class SongSelectButton : MonoBehaviour
     public void OnSongButtonClick()
     {
         // 1. シングルトンに曲名を保存
-        GameDataManager.Instance.songName = songTitle;
-        GameDataManager.Instance.currentSheetJson = sheetJson; // JSONを渡す
-        GameDataManager.Instance.currentAudioClip = musicClip; // AudioClipを渡す
+        var data = GameDataManager.Instance;
+        data.songName = songTitle;
+        data.currentAudioClip = musicClip;
+
+        if (data.difficulty == "Hard")
+        {
+            data.currentSheetJson = hardSheet;
+        }
+        else
+        {
+            data.currentSheetJson = normalSheet;
+        }
         
         // 2. 前回のスコアをリセットしておく
         GameDataManager.Instance.ResetData();

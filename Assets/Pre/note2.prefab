@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LongNoteController
   lane: 0
-  scrollSpeed: 10
+  scrollSpeed: 8
   startTime: 0
   endTime: 0
   bodyTransform: {fileID: 3946571516858317643}

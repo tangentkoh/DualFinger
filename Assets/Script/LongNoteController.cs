@@ -45,7 +45,7 @@ public class LongNoteController : MonoBehaviour
         }
 
         // 4. 消滅タイミング（終点が過ぎるまで絶対消さない）
-        if (currentTime > endTime + 0.3f) Destroy(gameObject);
+        if (currentTime > endTime + 0.5f) Destroy(gameObject);
     }
 
     public bool CheckHit(float currentTime, float range)

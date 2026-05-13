@@ -106,4 +106,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteController
   targetTime: 0
   lane: 0
-  scrollSpeed: 10
+  scrollSpeed: 8

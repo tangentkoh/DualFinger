@@ -36,13 +36,20 @@ public class InputHandler : MonoBehaviour
     {
         isLeftPressed = pressed;
         // 押し始めた瞬間だけ、判定メソッドに「JustDown」として伝える
-        if (pressed) Judge(0, true);
+        if (pressed) 
+        {
+            // 判定処理を呼ぶ
+            Judge(0, true);
+        }
     }
 
     public void SetRightPressed(bool pressed)
     {
         isRightPressed = pressed;
-        if (pressed) Judge(1, true);
+        if (pressed) 
+        {
+            Judge(1, true);
+        }
     }
 
     void Judge(int lane, bool isJustDown)
@@ -59,6 +66,8 @@ public class InputHandler : MonoBehaviour
             if (lNote.CheckHit(currentTime, okRange))
             {
                 ComboManager.Instance.AddScore("Good");
+                audioSource.PlayOneShot(tSound);
+                FManager.Instance.PlayTapEffect(lane);
                 return; // 1つの入力で複数の判定を取らないように抜ける
             }
         }
@@ -77,6 +86,7 @@ public class InputHandler : MonoBehaviour
                 {
                     ComboManager.Instance.AddScore(diff <= goodRange ? "Good" : "Ok");
                     audioSource.PlayOneShot(tSound);
+                    FManager.Instance.PlayTapEffect(lane);
                     Destroy(note.gameObject);
                     return;
                 }
