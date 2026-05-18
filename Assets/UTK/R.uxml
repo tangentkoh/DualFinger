@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UTK/R.uss" />
+    
+    <ui:VisualElement name="result-bg">
+        <ui:Label text="RESULT" name="result-header" />
+        
+        <ui:VisualElement name="info-block">
+            <ui:Label name="song-name" text="Song Name" />
+            <ui:Label name="difficulty" text="Normal" />
+            <ui:Label name="score" text="00000000" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="detail-block">
+            <ui:Label name="good-count" text="Good: 0" />
+            <ui:Label name="ok-count" text="Ok: 0" />
+            <ui:Label name="miss-count" text="Miss: 0" />
+            <ui:Label name="max-combo" text="Max Combo: 0" />
+        </ui:VisualElement>
+
+        <ui:Button text="BACK TO SELECT" name="back-button" />
+    </ui:VisualElement>
+</ui:UXML>

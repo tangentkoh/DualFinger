@@ -1,0 +1,50 @@
+#result-bg {
+    flex-grow: 1;
+    background-color: rgb(20, 20, 25);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#result-header {
+    font-size: 50px;
+    color: rgb(255, 215, 0); /* ゴールド */
+    -unity-font-style: bold;
+    margin-bottom: 20px;
+}
+
+#info-block {
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#song-name { font-size: 36px; color: white; -unity-font-style: bold; }
+#difficulty { font-size: 24px; color: rgb(150, 150, 150); margin-bottom: 10px; }
+#score { font-size: 48px; color: rgb(0, 255, 200); -unity-font-style: bold; }
+
+#detail-block {
+    background-color: rgb(35, 35, 40);
+    padding: 20px 50px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    width: 300px;
+}
+
+#detail-block Label {
+    font-size: 20px;
+    color: white;
+    margin: 4px 0;
+}
+
+#back-button {
+    font-size: 22px;
+    padding: 12px 35px;
+    background-color: rgb(50, 150, 50);
+    color: white;
+    border-radius: 6px;
+    border-width: 0;
+}
+
+#back-button:hover {
+    background-color: rgb(65, 180, 65);
+}

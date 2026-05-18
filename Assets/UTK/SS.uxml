@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UTK/SS.uss" />
+    
+    <ui:VisualElement name="container">
+        <ui:VisualElement name="difficulty-area">
+            <ui:Label text="Difficulty: Normal" name="difficulty-label" />
+            <ui:Button text="SWITCH" name="difficulty-button" />
+        </ui:VisualElement>
+        
+        <ui:ScrollView name="song-list" />
+    </ui:VisualElement>
+</ui:UXML>

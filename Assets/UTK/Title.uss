@@ -1,0 +1,28 @@
+#background-container {
+    flex-grow: 1;
+    background-color: rgb(20, 20, 20); /* ダークグレーの背景 */
+    justify-content: center; /* 縦方向の中央寄せ */
+    align-items: center;     /* 横方向の中央寄せ */
+}
+
+#title-label {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    margin-bottom: 40px; /* ボタンとの隙間 */
+}
+
+#start-button {
+    font-size: 24px;
+    padding: 15px 40px;
+    background-color: rgb(0, 150, 255); /* 青いボタン */
+    color: rgb(255, 255, 255);
+    border-radius: 8px; /* 角丸 */
+    border-width: 0;
+}
+
+/* ボタンにマウスを乗せたとき（ホバー効果） */
+#start-button:hover {
+    background-color: rgb(0, 180, 255);
+    cursor: link;
+}

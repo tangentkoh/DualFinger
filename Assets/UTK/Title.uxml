@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UTK/Title.uss" />
+    
+    <ui:VisualElement name="background-container">
+        <ui:Label text="MY RHYTHM GAME" name="title-label" />
+        
+        <ui:Button text="GAME START" name="start-button" />
+    </ui:VisualElement>
+</ui:UXML>
